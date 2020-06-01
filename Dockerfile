@@ -12,7 +12,6 @@ WORKDIR /build
 
 # build from source
 RUN git clone https://github.com/kr/beanstalkd.git && \
-    printenv && \
     cd beanstalkd && \
     if [ "${BEANSTALKD_VERSION}" != "master" ] ; then \
         git checkout tags/v${BEANSTALKD_VERSION}; \
