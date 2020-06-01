@@ -1,10 +1,19 @@
+sudo: required
+
+branches:
+  only:
+  - master
+
 language: shell
 
 services:
   - docker
 
-buildNpush:
-  provider: script
-  script: bash buildnpush.sh
-  on:
-    branch: master
+install:
+  - echo "install nothing!"
+
+script:
+  - echo "no tests!"
+
+after_success:
+  - bash buildnpush.sh
