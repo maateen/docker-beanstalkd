@@ -17,6 +17,9 @@ RUN git clone https://github.com/kr/beanstalkd.git && \
     if [ "${BEANSTALKD_VERSION}" != "master" ] ; then \
         git checkout tags/v${BEANSTALKD_VERSION}; \
     fi && \
+    if [ -f "sd-daemon.c" ]; then \
+        sed -i 's,sys/fcntl.h,fcntl.h,' sd-daemon.c; \
+    fi && \
     make && \
     ./beanstalkd -v
 
