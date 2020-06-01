@@ -1,0 +1,8 @@
+services:
+  - docker
+
+buildNpush:
+  provider: script
+  script: bash buildnpush.sh
+  on:
+    branch: master
