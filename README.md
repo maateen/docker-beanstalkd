@@ -3,9 +3,11 @@
 A Docker container for beanstalkd, a simple and fast general purpose work queue.
 
 [![Build Status](https://travis-ci.com/maateen/docker-beanstalkd.svg?branch=master)](https://travis-ci.com/maateen/docker-beanstalkd)
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/maateen/docker-beanstalkd)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/maateen/docker-beanstalkd)
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/maateen/docker-beanstalkd)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/maateen/docker-beanstalkd/latest)
+[![](https://images.microbadger.com/badges/image/maateen/docker-beanstalkd.svg)](https://microbadger.com/images/maateen/docker-beanstalkd "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/license/maateen/docker-beanstalkd.svg)](https://microbadger.com/images/maateen/docker-beanstalkd "Get your own license badge on microbadger.com")
 
 ## Quick reference
 
