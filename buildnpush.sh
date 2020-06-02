@@ -33,5 +33,5 @@ else
     done
 fi
 
-# Webhooks
-curl -X POST "https://hooks.microbadger.com/images/maateen/docker-beanstalkd/cJ6YwSmK3M8-7iGdWYPYQoST-iY\="
+# microbadger webhook
+curl -sL -X POST https://hooks.microbadger.com/images/maateen/docker-beanstalkd/cJ6YwSmK3M8-7iGdWYPYQoST-iY\=
