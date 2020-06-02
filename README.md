@@ -3,10 +3,10 @@
 A Docker container for beanstalkd, a simple and fast general purpose work queue.
 
 [![Build Status](https://travis-ci.com/maateen/docker-beanstalkd.svg?branch=master)](https://travis-ci.com/maateen/docker-beanstalkd)
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/maateen/docker-beanstalkd)
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/maateen/docker-beanstalkd)
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/maateen/docker-beanstalkd/latest)
-[![](https://images.microbadger.com/badges/image/maateen/docker-beanstalkd.svg)](https://microbadger.com/images/maateen/docker-beanstalkd "Get your own image badge on microbadger.com")
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/maateen/docker-beanstalkd)](https://hub.docker.com/r/maateen/docker-beanstalkd/builds)
+[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/maateen/docker-beanstalkd)](https://hub.docker.com/r/maateen/docker-beanstalkd/builds)
+[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/maateen/docker-beanstalkd/latest)](https://hub.docker.com/repository/docker/maateen/docker-beanstalkd/tags)
+[![MicroBadger Layers](https://img.shields.io/microbadger/layers/maateen/docker-beanstalkd)](https://microbadger.com/images/maateen/docker-beanstalkd "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/license/maateen/docker-beanstalkd.svg)](https://microbadger.com/images/maateen/docker-beanstalkd "Get your own license badge on microbadger.com")
 
 ## Quick reference
