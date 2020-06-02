@@ -17,8 +17,8 @@ A Docker container for beanstalkd, a simple and fast general purpose work queue.
 
 ## Supported tags
 
-- `latest` (regular builds, might be unstable)
-- `master-alpine-edge`, `master-alpine-latest`, `master-alpine-3.12`, `master-alpine-3.11`, `master-alpine-3.10`, `master-alpine-3.9`
+- `latest` (regular build, unstable)
+- `master-alpine-edge`, `master-alpine-latest`, `master-alpine-3.12`, `master-alpine-3.11`, `master-alpine-3.10`, `master-alpine-3.9` (regular builds, unstable)
 - `1.11-alpine-edge`, `1.11-alpine-latest` (**stable**), `1.11-alpine-3.12`, `1.11-alpine-3.11`, `1.11-alpine-3.10`, `1.11-alpine-3.9`
 - `1.10-alpine-edge`, `1.10-alpine-latest`, `1.10-alpine-3.12`, `1.10-alpine-3.11`, `1.10-alpine-3.10`, `1.10-alpine-3.9`
 - `1.9-alpine-edge`, `1.9-alpine-latest`, `1.9-alpine-3.12`, `1.9-alpine-3.11`, `1.9-alpine-3.10`, `1.9-alpine-3.9`
