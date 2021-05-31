@@ -18,11 +18,12 @@ A Docker container for beanstalkd, a simple and fast general purpose work queue.
 ## Supported tags
 
 - `latest` (regular build, unstable)
-- `master-alpine-edge`, `master-alpine-latest`, `master-alpine-3.12`, `master-alpine-3.11`, `master-alpine-3.10`, `master-alpine-3.9` (regular builds, unstable)
-- `1.11-alpine-edge`, `1.11-alpine-latest` (**stable**), `1.11-alpine-3.12`, `1.11-alpine-3.11`, `1.11-alpine-3.10`, `1.11-alpine-3.9`
-- `1.10-alpine-edge`, `1.10-alpine-latest`, `1.10-alpine-3.12`, `1.10-alpine-3.11`, `1.10-alpine-3.10`, `1.10-alpine-3.9`
-- `1.9-alpine-edge`, `1.9-alpine-latest`, `1.9-alpine-3.12`, `1.9-alpine-3.11`, `1.9-alpine-3.10`, `1.9-alpine-3.9`
-- `1.8-alpine-edge`, `1.8-alpine-latest`, `1.8-alpine-3.12`, `1.8-alpine-3.11`, `1.8-alpine-3.10`, `1.8-alpine-3.9`
+- `master-alpine-edge`, `master-alpine-latest`, `master-alpine-3.13`, `master-alpine-3.12`, `master-alpine-3.11`, `master-alpine-3.10`, `master-alpine-3.9` (regular builds, unstable)
+- `1.12-alpine-edge`, `1.12-alpine-latest` (**stable**), `1.12-alpine-3.13`, `1.12-alpine-3.12`, `1.12-alpine-3.11`, `1.12-alpine-3.10`, `1.12-alpine-3.9`
+- `1.11-alpine-edge`, `1.11-alpine-latest`, `1.11-alpine-3.13`, `1.11-alpine-3.12`, `1.11-alpine-3.11`, `1.11-alpine-3.10`, `1.11-alpine-3.9`
+- `1.10-alpine-edge`, `1.10-alpine-latest`, `1.10-alpine-3.13`, `1.10-alpine-3.12`, `1.10-alpine-3.11`, `1.10-alpine-3.10`, `1.10-alpine-3.9`
+- `1.9-alpine-edge`, `1.9-alpine-latest`, `1.9-alpine-3.13`, `1.9-alpine-3.12`, `1.9-alpine-3.11`, `1.9-alpine-3.10`, `1.9-alpine-3.9`
+- `1.8-alpine-edge`, `1.8-alpine-latest`, `1.8-alpine-3.13`, `1.8-alpine-3.12`, `1.8-alpine-3.11`, `1.8-alpine-3.10`, `1.8-alpine-3.9`
 
 ## What is beanstalkd?
 

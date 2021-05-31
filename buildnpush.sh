@@ -2,8 +2,8 @@
 
 repo_name="maateen/docker-beanstalkd"
 build_date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-alpine_versions=('3.9' '3.10' '3.11' '3.12' 'latest' 'edge')
-beanstalkd_versions=('1.8' '1.9' '1.10' '1.11', '1.12')
+alpine_versions=('3.9' '3.10' '3.11' '3.12' '3.13' 'latest' 'edge')
+beanstalkd_versions=('1.8' '1.9' '1.10' '1.11' '1.12')
 
 buildNpush() {
     alpine_version=$1
