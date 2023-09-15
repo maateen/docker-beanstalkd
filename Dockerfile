@@ -53,7 +53,7 @@ ENV FSYNC_INTERVAL 1000
 COPY --from=builder /build/beanstalkd /usr/bin/
 
 RUN mkdir -p ${PV_DIR}
-VOLUME [${PV_DIR}]
+VOLUME ${PV_DIR}
 
 EXPOSE 11300
 
