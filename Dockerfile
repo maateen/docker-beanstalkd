@@ -1,8 +1,8 @@
-ARG ALPINE_VERSION=edge
+ARG ALPINE_VERSION="latest"
 
-FROM alpine:${ALPINE_VERSION} AS builder
+FROM public.ecr.aws/docker/library/alpine:${ALPINE_VERSION} AS builder
 
-ARG BEANSTALKD_VERSION=master
+ARG BEANSTALKD_VERSION="v1.13"
 
 # install dependencies
 RUN apk update --quiet --no-cache && \
@@ -11,11 +11,8 @@ RUN apk update --quiet --no-cache && \
 WORKDIR /build
 
 # build from source
-RUN git clone https://github.com/kr/beanstalkd.git && \
+RUN git clone --depth 1 --branch $BEANSTALKD_VERSION https://github.com/beanstalkd/beanstalkd.git && \
     cd beanstalkd && \
-    if [ "${BEANSTALKD_VERSION}" != "master" ] ; then \
-        git checkout tags/v${BEANSTALKD_VERSION}; \
-    fi && \
     if [ -f "sd-daemon.c" ]; then \
         sed -i 's,sys/fcntl.h,fcntl.h,' sd-daemon.c; \
     fi && \
@@ -25,27 +22,18 @@ RUN git clone https://github.com/kr/beanstalkd.git && \
 ###############
 # Final Build #
 ###############
-ARG ALPINE_VERSION=edge
+FROM public.ecr.aws/docker/library/alpine:${ALPINE_VERSION}
 
-FROM alpine:${ALPINE_VERSION}
-
-ARG BEANSTALKD_VERSION=master
-
-ARG BUILD_DATE
-ARG VCS_REF
-LABEL version=$BEANSTALKD_VERSION \
-    maintainer="Maksudur Rahman Maateen <maateen@outlook.com>" \
-    org.label-schema.build-date=$BUILD_DATE \
-    org.label-schema.name="maateen/docker-beanstalkd" \
-    org.label-schema.description="A Docker container for beanstalkd, a simple and fast general purpose work queue." \
-    org.label-schema.url="https://beanstalkd.github.io/" \
-    org.label-schema.vcs-ref=$VCS_REF \
-    org.label-schema.vcs-url="https://github.com/maateen/docker-beanstalkd" \
-    org.label-schema.vendor="Maksudur Rahman Maateen" \
-    org.label-schema.version=$BEANSTALKD_VERSION \
-    org.label-schema.schema-version="1.0" \
-    com.microscaling.docker.dockerfile="/Dockerfile" \
-    com.microscaling.license="GPL-3.0"
+LABEL org.opencontainers.image.authors="Maksudur Rahman Maateen <maateen@outlook.com>"
+LABEL org.opencontainers.image.created="${BUILD_DATE}"
+LABEL org.opencontainers.image.description="A Docker container for beanstalkd, a simple and fast general purpose work queue."
+LABEL org.opencontainers.image.documentation="https://github.com/maateen/docker-beanstalkd"
+LABEL org.opencontainers.image.licenses="GPL-3.0"
+LABEL org.opencontainers.image.source="https://beanstalkd.github.io/"
+LABEL org.opencontainers.image.title="maateen/docker-beanstalkd"
+LABEL org.opencontainers.image.url="https://github.com/maateen/docker-beanstalkd"
+LABEL org.opencontainers.image.vendor="Maksudur Rahman Maateen <maateen@outlook.com>"
+LABEL org.opencontainers.image.version="${BEANSTALKD_VERSION}"
 
 ENV PV_DIR /var/cache/beanstalkd
 ENV FSYNC_INTERVAL 1000
