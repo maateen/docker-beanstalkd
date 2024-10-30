@@ -40,7 +40,9 @@ jobs:
       - name: Build Docker image
         uses: docker/build-push-action@v6
         with:
-          build-args: ALPINE_VERSION=${{ matrix.alpine }} BEANSTALKD_VERSION=${{ matrix.beanstalkd }}
+          build-args: |
+            ALPINE_VERSION=${{ matrix.alpine }}
+            BEANSTALKD_VERSION=${{ matrix.beanstalkd }}
           context: .
           cache-from: type=gha
           cache-to: type=gha,mode=max
