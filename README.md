@@ -2,13 +2,6 @@
 
 A Docker container for beanstalkd, a simple and fast general purpose work queue.
 
-[![Build Status](https://travis-ci.com/maateen/docker-beanstalkd.svg?branch=master)](https://travis-ci.com/maateen/docker-beanstalkd)
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/maateen/docker-beanstalkd)](https://hub.docker.com/r/maateen/docker-beanstalkd/builds)
-[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/maateen/docker-beanstalkd)](https://hub.docker.com/r/maateen/docker-beanstalkd/builds)
-[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/maateen/docker-beanstalkd/latest)](https://hub.docker.com/repository/docker/maateen/docker-beanstalkd/tags)
-[![MicroBadger Layers](https://img.shields.io/microbadger/layers/maateen/docker-beanstalkd)](https://microbadger.com/images/maateen/docker-beanstalkd "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/license/maateen/docker-beanstalkd.svg)](https://microbadger.com/images/maateen/docker-beanstalkd "Get your own license badge on microbadger.com")
-
 ## Quick reference
 
 - **Where to file issues**: https://github.com/maateen/docker-beanstalkd/issues
@@ -17,19 +10,11 @@ A Docker container for beanstalkd, a simple and fast general purpose work queue.
 
 ## Supported tags
 
-- `latest` (regular build, unstable)
-- `master-alpine-edge`, `master-alpine-latest`, `master-alpine-3.13`, `master-alpine-3.12`, `master-alpine-3.11`, `master-alpine-3.10`, `master-alpine-3.9` (regular builds, unstable)
-- `1.12-alpine-edge`, `1.12-alpine-latest` (**stable**), `1.12-alpine-3.13`, `1.12-alpine-3.12`, `1.12-alpine-3.11`, `1.12-alpine-3.10`, `1.12-alpine-3.9`
-- `1.11-alpine-edge`, `1.11-alpine-latest`, `1.11-alpine-3.13`, `1.11-alpine-3.12`, `1.11-alpine-3.11`, `1.11-alpine-3.10`, `1.11-alpine-3.9`
-- `1.10-alpine-edge`, `1.10-alpine-latest`, `1.10-alpine-3.13`, `1.10-alpine-3.12`, `1.10-alpine-3.11`, `1.10-alpine-3.10`, `1.10-alpine-3.9`
-- `1.9-alpine-edge`, `1.9-alpine-latest`, `1.9-alpine-3.13`, `1.9-alpine-3.12`, `1.9-alpine-3.11`, `1.9-alpine-3.10`, `1.9-alpine-3.9`
-- `1.8-alpine-edge`, `1.8-alpine-latest`, `1.8-alpine-3.13`, `1.8-alpine-3.12`, `1.8-alpine-3.11`, `1.8-alpine-3.10`, `1.8-alpine-3.9`
+To Do
 
 ## What is beanstalkd?
 
-It is a simple, fast work queue. Its interface is generic, but was originally designed for reducing the latency of page views in high-volume web applications by running time-consuming tasks asynchronously.
-
-For more information and related downloads for beanstalkd, please visit  [beanstalkd.github.io](https://beanstalkd.github.io/).
+It is a simple, fast work queue. Its interface is generic, but was originally designed for reducing the latency of page views in high-volume web applications by running time-consuming tasks asynchronously. For more information and related downloads for beanstalkd, please visit  [beanstalkd.github.io](https://beanstalkd.github.io/).
 
 ## How to use this image
 
