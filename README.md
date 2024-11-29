@@ -2,7 +2,7 @@
 
 A Docker container for beanstalkd, a simple and fast general purpose work queue.
 
-[![Build Status](https://travis-ci.com/maateen/docker-beanstalkd.svg?branch=master)](https://travis-ci.com/maateen/docker-beanstalkd)
+[![Build Status](https://travis-ci.com/maateen/docker-beanstalkd.svg?branch=main)](https://travis-ci.com/maateen/docker-beanstalkd)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/maateen/docker-beanstalkd)](https://hub.docker.com/r/maateen/docker-beanstalkd/builds)
 [![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/maateen/docker-beanstalkd)](https://hub.docker.com/r/maateen/docker-beanstalkd/builds)
 [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/maateen/docker-beanstalkd/latest)](https://hub.docker.com/repository/docker/maateen/docker-beanstalkd/tags)
@@ -19,7 +19,8 @@ A Docker container for beanstalkd, a simple and fast general purpose work queue.
 
 - `latest` (regular build, unstable)
 - `master-alpine-edge`, `master-alpine-latest`, `master-alpine-3.13`, `master-alpine-3.12`, `master-alpine-3.11`, `master-alpine-3.10`, `master-alpine-3.9` (regular builds, unstable)
-- `1.12-alpine-edge`, `1.12-alpine-latest` (**stable**), `1.12-alpine-3.13`, `1.12-alpine-3.12`, `1.12-alpine-3.11`, `1.12-alpine-3.10`, `1.12-alpine-3.9`
+- `1.13-alpine-edge`, `1.13-alpine-latest` (**stable**), `1.13-alpine-3.13`, `1.13-alpine-3.12`, `1.13-alpine-3.11`, `1.13-alpine-3.10`, `1.13-alpine-3.9`
+- `1.12-alpine-edge`, `1.12-alpine-latest`, `1.12-alpine-3.13`, `1.12-alpine-3.12`, `1.12-alpine-3.11`, `1.12-alpine-3.10`, `1.12-alpine-3.9`
 - `1.11-alpine-edge`, `1.11-alpine-latest`, `1.11-alpine-3.13`, `1.11-alpine-3.12`, `1.11-alpine-3.11`, `1.11-alpine-3.10`, `1.11-alpine-3.9`
 - `1.10-alpine-edge`, `1.10-alpine-latest`, `1.10-alpine-3.13`, `1.10-alpine-3.12`, `1.10-alpine-3.11`, `1.10-alpine-3.10`, `1.10-alpine-3.9`
 - `1.9-alpine-edge`, `1.9-alpine-latest`, `1.9-alpine-3.13`, `1.9-alpine-3.12`, `1.9-alpine-3.11`, `1.9-alpine-3.10`, `1.9-alpine-3.9`
