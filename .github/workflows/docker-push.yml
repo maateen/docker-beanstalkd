@@ -47,14 +47,14 @@ jobs:
         id: build
         uses: docker/build-push-action@v6
         with:
+          annotations: ${{ steps.meta.outputs.annotations }}
           build-args: |
             ALPINE_VERSION=${{ matrix.alpine_version }}
             BEANSTALKD_VERSION=${{ matrix.beanstalkd_version }}
           context: .
           labels: ${{ steps.meta.outputs.labels }}
           platforms: ${{ matrix.platform }}
-          push: ${{ github.event_name != 'pull_request' }}
-          outputs: type=image,name=${{ github.repository }},push-by-digest=true,name-canonical=true,push=true
+          outputs: type=image,name=${{ github.repository }},push-by-digest=true,name-canonical=true,push=${{ github.event_name != 'pull_request' }}
 
       - name: Export digest
         if: github.event_name != 'pull_request'
