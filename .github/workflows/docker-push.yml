@@ -37,6 +37,7 @@ jobs:
           images: ${{ github.repository }}
 
       - name: Login to Docker Hub
+        if: github.event_name != 'pull_request'
         uses: docker/login-action@v3
         with:
           username: ${{ github.repository_owner }}
@@ -52,15 +53,18 @@ jobs:
           context: .
           labels: ${{ steps.meta.outputs.labels }}
           platforms: ${{ matrix.platform }}
+          push: ${{ github.event_name != 'pull_request' }}
           outputs: type=image,name=${{ github.repository }},push-by-digest=true,name-canonical=true,push=true
 
       - name: Export digest
+        if: github.event_name != 'pull_request'
         run: |
           mkdir -p /tmp/digests/${{ matrix.beanstalkd_version }}-alpine-${{ matrix.alpine_version }}
           digest="${{ steps.build.outputs.digest }}"
           touch "/tmp/digests/${{ matrix.beanstalkd_version }}-alpine-${{ matrix.alpine_version }}/${digest#sha256:}"          
 
       - name: Upload digest
+        if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: digests-${{ matrix.beanstalkd_version }}-alpine-${{ matrix.alpine_version }}-${{ env.PLATFORM_PAIR }}
@@ -70,6 +74,7 @@ jobs:
 
   merge:
     runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
     needs:
       - build
     strategy:
