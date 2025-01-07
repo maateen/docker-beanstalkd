@@ -74,13 +74,14 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push by digest
-        id: build
         uses: docker/build-push-action@v6
         with:
-          annotations: ${{ steps.meta.outputs.annotations }}
           build-args: |
             ALPINE_VERSION=${{ matrix.alpine_version }}
             BEANSTALKD_VERSION=${{ matrix.beanstalkd_version }}
+            BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+            VCS_REF=${{ github.sha }}
+            VERSION=${{ matrix.beanstalkd_version }}
           context: .
           labels: |
             ${{ steps.meta.outputs.labels }}
