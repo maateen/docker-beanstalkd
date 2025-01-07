@@ -1,9 +1,10 @@
 # docker-beanstalkd
 
-![Docker Pulls](https://img.shields.io/docker/pulls/maateen/docker-beanstalkd)
-![Docker Stars](https://img.shields.io/docker/stars/maateen/docker-beanstalkd)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/maateen/docker-beanstalkd/docker-image-push.yml)
-![License](https://img.shields.io/github/license/maateen/docker-beanstalkd)
+[![Docker Pulls](https://img.shields.io/docker/pulls/maateen/docker-beanstalkd.svg)](https://hub.docker.com/r/maateen/docker-beanstalkd)
+[![Docker Stars](https://img.shields.io/docker/stars/maateen/docker-beanstalkd.svg)](https://hub.docker.com/r/maateen/docker-beanstalkd)
+[![Docker Image Size](https://img.shields.io/docker/image-size/maateen/docker-beanstalkd/latest.svg)](https://hub.docker.com/r/maateen/docker-beanstalkd)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/maateen/docker-beanstalkd/docker-push.yml?branch=main)](https://github.com/maateen/docker-beanstalkd/actions)
+[![GitHub License](https://img.shields.io/github/license/maateen/docker-beanstalkd)](https://github.com/maateen/docker-beanstalkd/blob/main/LICENSE)
 
 A Docker container for Beanstalkd, a simple and fast general-purpose work queue.
 
@@ -12,6 +13,11 @@ A Docker container for Beanstalkd, a simple and fast general-purpose work queue.
 - **Where to file issues**: [GitHub Issues](https://github.com/maateen/docker-beanstalkd/issues)
 - **Where to get help**: [GitHub Issues](https://github.com/maateen/docker-beanstalkd/issues)
 - **Image updates**: [GitHub Pull Requests](https://github.com/maateen/docker-beanstalkd/pulls)
+
+## Supported Registries
+
+- [Docker Hub](https://hub.docker.com/r/maateen/docker-beanstalkd)
+- [GitHub Container Registry](https://github.com/maateen/docker-beanstalkd/pkgs/container/docker-beanstalkd)
 
 ## Supported Tags
 
@@ -22,18 +28,22 @@ A Docker container for Beanstalkd, a simple and fast general-purpose work queue.
 - `v1.9-alpine-3.21`, `v1.9-alpine-3.20`, `v1.9-alpine-3.19`, `v1.9-alpine-3.18`
 - `v1.8-alpine-3.21`, `v1.8-alpine-3.20`, `v1.8-alpine-3.19`, `v1.8-alpine-3.18`
 
-These tags represent the supported combinations of Beanstalkd and Alpine Linux versions, providing flexibility for various deployment environments.
-
 ## What is Beanstalkd?
 
 Beanstalkd is a simple, fast work queue. Its interface is generic but was originally designed for reducing the latency of page views in high-volume web applications by running time-consuming tasks asynchronously. For more information and related downloads for Beanstalkd, please visit [beanstalkd.github.io](https://beanstalkd.github.io/).
 
 ## How to Use This Image
 
-### Start a Beanstalkd Instance
+### Using Docker Hub
 
 ```bash
 docker run --name some-beanstalkd -d maateen/docker-beanstalkd
+```
+
+### Using GitHub Container Registry
+
+```bash
+docker run --name some-beanstalkd -d ghcr.io/maateen/docker-beanstalkd
 ```
 
 ### Start with Persistent Storage
