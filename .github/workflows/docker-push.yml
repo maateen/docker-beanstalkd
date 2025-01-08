@@ -9,9 +9,6 @@ on:
 env:
   DOCKER_REPOSITORY: 'maateen/docker-beanstalkd'
   GHCR_REPOSITORY: 'ghcr.io/maateen/docker-beanstalkd'
-  PLATFORMS: '["linux/amd64", "linux/arm64"]'
-  ALPINE_VERSIONS: '["3.18", "3.19", "3.20", "3.21"]'
-  BEANSTALKD_VERSIONS: '["v1.8", "v1.9", "v1.10", "v1.11", "v1.12", "v1.13"]'
 
 jobs:
   build:
@@ -22,9 +19,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        alpine_version: ${{ fromJson(env.ALPINE_VERSIONS) }}
-        beanstalkd_version: ${{ fromJson(env.BEANSTALKD_VERSIONS) }}
-        platform: ${{ fromJson(env.PLATFORMS) }}
+        alpine_version: ["3.18", "3.19", "3.20", "3.21"]
+        beanstalkd_version: ["v1.8", "v1.9", "v1.10", "v1.11", "v1.12", "v1.13"]
+        platform: ["linux/amd64", "linux/arm64"]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -118,8 +115,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        alpine_version: ${{ fromJson(env.ALPINE_VERSIONS) }}
-        beanstalkd_version: ${{ fromJson(env.BEANSTALKD_VERSIONS) }}
+        alpine_version: ["3.18", "3.19", "3.20", "3.21"]
+        beanstalkd_version: ["v1.8", "v1.9", "v1.10", "v1.11", "v1.12", "v1.13"]
     steps:
       - name: Prepare
         run: |
